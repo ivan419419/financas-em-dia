@@ -1,89 +1,72 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# Finanças em Dia
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
+**Organização de finanças pessoais sem complicação.** Um app web leve para registrar receitas e despesas em segundos, visualizar para onde o dinheiro vai e acompanhar uma meta mensal — sem login e com dados guardados no próprio navegador.
 
-## ✨ O que é Vibe Coding
+> Aplicação publicada: **link será adicionado após a implantação na Vercel.**
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+## Conceito
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+Finanças em Dia foi pensado para quem quer começar a cuidar do dinheiro, mas se sente desmotivado por ferramentas complexas. A interface concentra o essencial em uma tela clara: saldo atual, receitas e despesas do mês, movimentações recentes, distribuição dos gastos e progresso de economia.
 
-## 🎯 Desafio
+## O que o app faz
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+- Mostra **Saldo atual**, **Receitas do mês** e **Despesas do mês**.
+- Registra receitas ou despesas por meio do botão **Nova transação**, com descrição, valor em reais, categoria e data.
+- Organiza as movimentações nas categorias Moradia, Alimentação, Transporte, Lazer, Saúde, Educação, Salário e Outros.
+- Filtra por mês, tipo e categoria, permite buscar pela descrição e excluir itens.
+- Apresenta um gráfico de rosca de despesas por categoria e um gráfico de barras de receitas versus despesas nos últimos seis meses.
+- Acompanha uma meta de economia mensal editável, com barra de progresso.
+- Inicia com cinco transações de demonstração quando não há dados salvos.
+- Guarda transações e meta no `localStorage`; não exige conta e não envia dados financeiros para um servidor.
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+## Tecnologias
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
+React 18 · TypeScript · Vite · Tailwind CSS · Recharts · Lucide React
 
-## 🪄 Etapas do Desafio
+## Rodar localmente
 
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
+Requisitos: Node.js 20 ou superior e npm.
 
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
-
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
-
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
-
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
-
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
-
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
-
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
+```bash
+git clone https://github.com/ivan419419/financas-em-dia.git
+cd financas-em-dia
+npm install
+npm run dev
 ```
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+Abra o endereço local informado pelo Vite (normalmente `http://localhost:5173`). Para validar uma compilação de produção:
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+```bash
+npm run build
+npm run preview
+```
 
-### 2. Explorando o Lovable na Prática
+## PRD e prompt final
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+O documento completo do produto está em [`PRD.md`](./PRD.md). Este é o prompt final usado como briefing de construção:
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+> Crie um aplicativo web moderno chamado “Finanças em Dia”, em React + TypeScript + Tailwind CSS, para organização simples de finanças pessoais. O problema é que muitas pessoas não mantêm controle porque os apps são complicados; a solução deve permitir registrar receita ou despesa em poucos segundos e mostrar para onde o dinheiro vai. Faça um dashboard mobile-first e responsivo com três cards — Saldo Atual, Receitas do Mês e Despesas do Mês — e botão “+ Nova Transação” que abre um modal com descrição, valor em R$, tipo (Receita/Despesa), categoria (Moradia, Alimentação, Transporte, Lazer, Saúde, Educação, Salário, Outros) e data. Mostre uma lista de transações filtrável por mês, tipo e categoria, com ação para excluir. Inclua um gráfico de pizza/rosca de despesas por categoria, um gráfico de barras de receitas vs despesas e uma meta mensal de economia com barra de progresso editável. Persista os dados em localStorage, sem login, e inicialize com cinco transações de exemplo somente na primeira abertura. Use interface clara, limpa e acessível, cartões brancos arredondados, verde para receitas e vermelho/coral para despesas, textos em português do Brasil e valores em reais. Não use a imagem de referência como asset nem copie elementos proprietários; use-a apenas como inspiração visual. Inclua estados vazios, validação de formulário e instruções de execução local no README.
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
+## Prévia do aplicativo
 
-### 3. Entregando o Desafio na DIO
+![Dashboard do Finanças em Dia](./docs/evidencias/dashboard-desktop.png)
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+[Ver versão mobile](./docs/evidencias/dashboard-mobile.png) · [Ver formulário mobile](./docs/evidencias/nova-transacao-mobile.png)
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+As capturas acima são reais, geradas durante a execução do próprio app com dados de demonstração.
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
+## Validação
 
-## 💬 Conclusão
+Build de produção concluído com `npm run build`. Testes de ponta a ponta verificaram: cinco exemplos iniciais, gráfico de rosca, cadastro com vírgula decimal, persistência ao recarregar, filtros de tipo/categoria/mês, busca, exclusão, meta editável por mês, estado vazio, viewport móvel de 390 px sem rolagem horizontal e recuperação de dados locais inválidos. Nenhum erro de execução foi registrado nesses testes.
 
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
+## Evidências do processo com IA
+
+O briefing foi transformado em código com assistência de IA no Cue; o aplicativo não contém um agente financeiro de IA em execução. A atividade sugere anexar capturas reais de interações com Copilot ou Lovable. Nenhuma interação nessas plataformas foi realizada neste trabalho; por isso, **não foram inventadas nem incluídas capturas**. Se você fizer essas interações, adicione aqui as imagens ou vídeos originais antes de entregar, por exemplo em `docs/evidencias/`, com uma legenda para cada arquivo. A imagem de referência de design foi usada somente como inspiração visual, não como asset do app.
+
+## Aprendizados e reflexão
+
+Especificar o problema, o público, os campos do formulário e os critérios de aceite antes da implementação ajuda a transformar uma ideia ampla em entregas verificáveis. A simplicidade também depende de escolhas técnicas: neste MVP, o `localStorage` elimina cadastro e reduz a barreira inicial, mas significa que os dados permanecem apenas naquele navegador e não são sincronizados entre dispositivos. Os exemplos de dados e os estados vazios tornam o painel compreensível logo na primeira abertura. Um próximo passo seria testar a experiência com pessoas iniciantes e usar esse retorno para priorizar melhorias sem perder a proposta de poucos passos.
+
+## Sobre o desafio DIO
+
+Este repositório é um fork/adaptação do laboratório oficial [dio-lab-vibe-coding-app-financas](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas), usado como ponto de partida para a entrega da trilha Santander.
