@@ -2,7 +2,9 @@
 
 **Organização de finanças pessoais sem complicação.** Um app web leve para registrar receitas e despesas em segundos, visualizar para onde o dinheiro vai e acompanhar uma meta mensal — sem login e com dados guardados no próprio navegador.
 
-> Aplicação publicada: **link será adicionado após a implantação na Vercel.**
+> **Acesse o app:** [financas-em-dia-omega.vercel.app](https://financas-em-dia-omega.vercel.app)
+>
+> **Repositório público:** [ivan419419/financas-em-dia](https://github.com/ivan419419/financas-em-dia)
 
 ## Conceito
 
